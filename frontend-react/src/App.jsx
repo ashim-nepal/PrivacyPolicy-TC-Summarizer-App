@@ -48,8 +48,9 @@ function App(){
   return(
     <div className="app-container">
       <header className="header">
-        <h1>Privacy & Policy Summarizer AI</h1>
+        <h1>Privacy & Policy Summarizer (Text Summarizer) AI</h1>
         <p>Paste those boring long Terms & Privacy Policies to get their instant summaries.</p>
+        <p>- Designed by <b><a href='https://ashimnepal.com.np' target='_blank'>Ashim Nepal</a></b></p>
       </header>
 
       <div className="inpit-section">
