@@ -2,6 +2,7 @@ from flask import Flask, jsonify, request
 import tensorflow as tf
 from transformers import AutoTokenizer, TFT5ForConditionalGeneration
 import os
+from flask_cors import CORS
 
 # Model path to use the model further
 model_path = os.path.join(os.path.dirname(__file__), '..', 'model_')
@@ -12,6 +13,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_path)
 model = TFT5ForConditionalGeneration.from_pretrained(model_path, from_pt=False)
 
 app = Flask(__name__) # Flask app
+CORS(app)
 
 # Home route
 @app.route('/', methods=["GET"])
